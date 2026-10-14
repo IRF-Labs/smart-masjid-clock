@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Smart Masjid Clock — public privacy policy (for the Google Play listing and the app's About screen).
+  Namaz Companion: Salah Times — public privacy policy (for the Google Play listing and the app's About screen).
   Self-contained on purpose: no web fonts, scripts, trackers or images, so reading it sends nothing to anyone.
 
   Keep docs/privacy-policy.md in step with this page. How to publish it: site/README.md.
@@ -10,8 +10,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index, follow">
-<meta name="description" content="Privacy policy of Smart Masjid Clock, an offline prayer-time and jamaat alarm app for Android.">
-<title>Smart Masjid Clock privacy policy</title>
+<meta name="description" content="Privacy policy of Namaz Companion: Salah Times, an offline prayer-time and jamaat alarm app for Android.">
+<title>Namaz Companion: Salah Times privacy policy</title>
 <style>
   :root {
     --bg: #fbfaf7; --fg: #1d2421; --muted: #55605b; --line: #dfe3df; --accent: #0f6b4f;
@@ -54,8 +54,8 @@
 <body>
 <main>
 <header>
-  <h1>Smart Masjid Clock privacy policy</h1>
-  <p class="meta">Effective 1 October 2026 · applies to Smart Masjid Clock for Android, version 3.7.0 and later
+  <h1>Namaz Companion: Salah Times privacy policy</h1>
+  <p class="meta">Effective 1 October 2026 · updated 14 October 2026 for reporting choices · applies to Namaz Companion: Salah Times for Android, version 3.9.0 and later
     (application ID <code>com.namaz.smartalerts</code>)</p>
   <p class="meta">Published by iKhan</p>
 </header>
@@ -64,11 +64,12 @@
   <p><strong>In short</strong></p>
   <ul>
     <li>The app works offline. Prayer times are calculated on your phone, for any place in the world.</li>
-    <li>There is no account, no advertising and no server of ours. We never sell, rent or share your data.</li>
-    <li>Your location, timetables, photos and settings stay on your phone, and uninstalling the app deletes them.</li>
+    <li>There is no account, no advertising and no app backend. We never sell or rent your data; sending a report is your choice.</li>
+    <li>Your location, timetables, photos and settings stay on your phone unless you choose to share them. Uninstalling deletes the app's copies.</li>
     <li>Three things can use the internet: <strong>online prayer times</strong>, which is off until you turn it on;
       <strong>city lists</strong> for a time zone, downloaded when you ask (or automatically, if you allow it);
       and <strong>Google ML Kit</strong>, the on-phone text reader for timetable photos, which sends Google diagnostics about itself.</li>
+    <li>On Google Play installs, Google Play may offer an optional review dialog. Feedback and bug reports leave through your own email app only when you send them.</li>
   </ul>
 </section>
 
@@ -80,7 +81,7 @@
     <li><a href="#online">Online prayer times (optional)</a></li>
     <li><a href="#cities">City lists</a></li>
     <li><a href="#mlkit">Reading timetable photos</a></li>
-    <li><a href="#crash">Crash reports (optional)</a></li>
+    <li><a href="#crash">Crash reports and feedback</a></li>
     <li><a href="#permissions">Permissions</a></li>
     <li><a href="#sharing">Sharing</a></li>
     <li><a href="#security">Security</a></li>
@@ -113,7 +114,9 @@
     <tr><td>Profiles you create and a list of the last 15 profile switches</td><td>Change settings automatically at home, at work or while travelling</td></tr>
     <tr><td>Prayer times fetched online, if you turned that on</td><td>Work offline afterwards</td></tr>
     <tr><td>City lists you downloaded (one per time zone) and when each was last used</td><td>Find every city of the time zones you use; only the few most recently used are kept</td></tr>
-    <tr><td>A crash report, only if you turned crash reports on</td><td>Help fix a crash if you choose to send it</td></tr>
+    <tr><td>A crash report with Ask me (default) or Always save; none with Off</td><td>Help fix a crash if you choose to send it; unsent reports expire after 14 days</td></tr>
+    <tr><td>The last 200 alarm events: type, time and what happened</td><td>Check why an alarm did not ring; kept on this phone</td></tr>
+    <tr><td>Bug reports, feedback and screenshots you choose to attach</td><td>Prepare an email you can inspect and send yourself; the app's temporary report copies expire after a day</td></tr>
   </tbody>
 </table>
 </div>
@@ -163,11 +166,26 @@
   This does not include your photos, the text read or your location. See Google's
   <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>.</p>
 
-<h2 id="crash">7. Crash reports (optional, off by default)</h2>
-<p>If you turn crash reports on (Settings → About), a report is saved on the phone when the app crashes. It contains the app
-  version, Android version, phone model, the time of the crash and the places in the app's code involved. It does not contain
-  prayer times, places, mosque names, messages or files. A report leaves the phone only if you tap <strong>Share last report</strong>
-  and choose where to send it. You can delete it at any time.</p>
+<h2 id="crash">7. Crash reports and feedback</h2>
+<p>Settings → Help &amp; feedback → Crash reports offers three choices. <strong>Ask me</strong> (the default) saves a report on
+  the phone and asks on a later app opening whether you want to send it. <strong>Always save</strong> keeps it for you to send
+  when you choose. <strong>Off</strong> records nothing. Reports contain the app and Android version, phone model, crash time
+  and code locations, without error messages, prayer times, places, mosque names or files. Nothing is uploaded automatically.
+  An unsent crash report is deleted after <strong>14 days</strong>; you can delete it sooner.</p>
+<h3>Feedback and bug reports</h3>
+<p>Help &amp; feedback sends feedback or bug reports through your <strong>own email app</strong> to the developer only when you
+  choose Send. A bug report's diagnostics text is shown in full first: app and Android version, phone model, yes/no permission
+  and feature states, recent reasons the app was closed, and the last crash report. Location, place, mosque, profile and Wi-Fi
+  names, recordings and timetable are excluded. Alarm history and prayer settings (calculation method, time zone and jamaat
+  rules) are added only if you tick them. Screenshots are attached only if you pick them. The last <strong>200 alarm events</strong>
+  behind “Why didn't my alarm ring?” stay on the phone unless you choose to include history in a report.</p>
+<p>Temporary report files on the phone are deleted after a day. Emails arrive in the developer's mailbox and are deleted once
+  the problem is resolved, at the latest after <strong>90 days</strong>; contact us to delete yours sooner.</p>
+<h3>Google Play reviews</h3>
+<p>For Google Play installs, the app may offer Google's optional review dialog after a week of successful alarm use, with no
+  recent missed alarm or crash. No alarm history, timetable, location or crash report is attached to that request. Reviews you
+  submit are handled by Google Play under its own terms. Attempts are limited to once per 90 days; Google may not show the
+  dialog. Help &amp; feedback keeps a direct store link.</p>
 
 <h2 id="permissions">8. Permissions</h2>
 <ul>
@@ -184,19 +202,20 @@
 
 <h2 id="sharing">9. Sharing</h2>
 <p>Apart from ML Kit's diagnostics, the optional online prayer times and city-list downloads, the app shares nothing by itself. Something leaves the phone
-  only when you send it yourself, for example a crash report through Android's share menu. We do not sell, rent or trade data,
+  only when you send it yourself, for example a crash report, bug report or feedback through your email app, or a board photo
+  opened in another app. We do not sell, rent or trade data,
   and there is no advertising or tracking.</p>
 
 <h2 id="security">10. Security</h2>
-<p>Data is kept in the app's private storage, which other apps cannot read. The app has no server, so there is no copy of your data
-  for us to lose. Online prayer times, city lists and ML Kit's diagnostics travel over encrypted connections (HTTPS), and each
+<p>Data is kept in the app's private storage, which other apps cannot read. The app has no backend or automatic report upload. Reports you choose to email are held in the developer's mailbox as described in section 7. Online prayer times, city lists and ML Kit's diagnostics travel over encrypted connections (HTTPS), and each
   downloaded city list is checked before use.</p>
 
 <h2 id="retention">11. Keeping and deleting data</h2>
 <p>Data stays on your phone until you delete it. In the app you can delete a profile, a saved mosque, a crash report, imported
   prayer start times or the jamaat times learned for a place; in Settings → City lists & storage you can remove downloaded city
   lists, saved online prayer times and saved-masjid calculations; you can turn off online prayer times and automatic downloads at any time, or delete everything by uninstalling the app or clearing its storage in
-  Android settings. We hold no data about you on any server, so there is nothing for us to keep or delete. Data that Google ML Kit
+  Android settings. Unsent crash reports expire after 14 days and temporary report files after a day. If you send an email, the
+  developer deletes it once resolved, within 90 days at the latest; you can request earlier deletion. Data that Google ML Kit
   or AlAdhan receive is handled under their own policies.</p>
 
 <h2 id="rights">12. Your choices and rights</h2>
@@ -213,7 +232,7 @@
   may process data in other countries under their own terms.</p>
 
 <h2 id="children">14. Children</h2>
-<p>Smart Masjid Clock is a general-audience prayer clock. It does not knowingly collect personal information from anyone,
+<p>Namaz Companion: Salah Times is a general-audience prayer clock. It does not knowingly collect personal information from anyone,
   including children.</p>
 
 <h2 id="changes">15. Changes and contact</h2>
@@ -222,8 +241,9 @@
 <p>Questions or requests: <a href="mailto:engr.ix9@gmail.com">engr.ix9@gmail.com</a></p>
 
 <footer>
-  <p>Smart Masjid Clock · Privacy policy · Effective 1 October 2026</p>
+  <p>Namaz Companion: Salah Times · Privacy policy · Updated 14 October 2026</p>
 </footer>
+
 </main>
 </body>
 </html>
