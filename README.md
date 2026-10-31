@@ -23,5 +23,5 @@ https://raw.githubusercontent.com/Engrirfaan/smart-masjid-clock/main/privacy/ind
 ## Identity
 
 - Developer: **iKhan**
-- Support: **engr.ix9@gmail.com**
+- Support: **irflabs@gmail.com**
 - Application ID: **`com.namaz.smartalerts`**

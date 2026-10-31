@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  Namaz Companion: Salah Times — public privacy policy (for the Google Play listing and the app's About screen).
+  Masjid Companion: Salah Times — public privacy policy (for the Google Play listing and the app's About screen).
   Self-contained on purpose: no web fonts, scripts, trackers or images, so reading it sends nothing to anyone.
 
   Keep docs/privacy-policy.md in step with this page. How to publish it: site/README.md.
@@ -10,8 +10,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index, follow">
-<meta name="description" content="Privacy policy of Namaz Companion: Salah Times, an offline prayer-time and jamaat alarm app for Android.">
-<title>Namaz Companion: Salah Times privacy policy</title>
+<meta name="description" content="Privacy policy of Masjid Companion: Salah Times, an offline prayer-time and jamaat alarm app for Android.">
+<title>Masjid Companion: Salah Times privacy policy</title>
 <style>
   :root {
     --bg: #fbfaf7; --fg: #1d2421; --muted: #55605b; --line: #dfe3df; --accent: #0f6b4f;
@@ -54,9 +54,9 @@
 <body>
 <main>
 <header>
-  <h1>Namaz Companion: Salah Times privacy policy</h1>
-  <p class="meta">Effective 1 October 2026 · updated 14 October 2026 for reporting choices · applies to Namaz Companion: Salah Times for Android, version 3.9.0 and later
-    (application ID <code>com.namaz.smartalerts</code>)</p>
+  <h1>Masjid Companion: Salah Times privacy policy</h1>
+  <p class="meta">Effective 1 October 2026 · updated 31 October 2026 for the masjid map, your own places, and the Qibla's map line and position now · applies to Masjid Companion: Salah Times for Android, version 3.9.0 and later
+    (application ID <code>com.irflabs.salahalerts</code>)</p>
   <p class="meta">Published by iKhan</p>
 </header>
 
@@ -66,8 +66,9 @@
     <li>The app works offline. Prayer times are calculated on your phone, for any place in the world.</li>
     <li>There is no account, no advertising and no app backend. We never sell or rent your data; sending a report is your choice.</li>
     <li>Your location, timetables, photos and settings stay on your phone unless you choose to share them. Uninstalling deletes the app's copies.</li>
-    <li>Three things can use the internet: <strong>online prayer times</strong>, which is off until you turn it on;
+    <li>Four things can use the internet: <strong>online prayer times</strong>, which is off until you turn it on;
       <strong>city lists</strong> for a time zone, downloaded when you ask (or automatically, if you allow it);
+      the <strong>masjid map</strong> and Google Maps short links, only when you tap them while adding a masjid, a profile's place or your own place, and the same map when you check the Qibla on it (section 5a);
       and <strong>Google ML Kit</strong>, the on-phone text reader for timetable photos, which sends Google diagnostics about itself.</li>
     <li>On Google Play installs, Google Play may offer an optional review dialog. Feedback and bug reports leave through your own email app only when you send them.</li>
   </ul>
@@ -80,6 +81,7 @@
     <li><a href="#profiles">Profiles and Wi-Fi names</a></li>
     <li><a href="#online">Online prayer times (optional)</a></li>
     <li><a href="#cities">City lists</a></li>
+    <li><a href="#map">Masjid map</a></li>
     <li><a href="#mlkit">Reading timetable photos</a></li>
     <li><a href="#crash">Crash reports and feedback</a></li>
     <li><a href="#permissions">Permissions</a></li>
@@ -93,10 +95,11 @@
   </ol>
 </nav>
 
+<p><strong>Local backups:</strong> Settings → Backup &amp; Restore can save a ZIP of named Jamaat presets, saved mosque boards (including location and timetable), prayer records, appearance preferences and Your places (the names, positions and time zones you saved in the city search). It excludes photos, recordings, active schedules, silence ownership, permissions, secrets and other settings. This is not a full-app backup. Files are not encrypted: keep them private. Android’s file picker may offer cloud providers; your chosen provider handles that copy. There is no automatic Drive backup or connected Drive account. File review is read-only; restore is not yet available. Uninstalling does not delete exports saved elsewhere.</p>
 <h2 id="stored">1. What the app keeps on your phone</h2>
-<p>Everything below is stored only in the app's private storage on your phone. We do not receive it. Android's cloud backup is
-  switched off for this app, so none of it is copied to a backup service. Uninstalling the app, or clearing its storage in
-  Android settings, deletes all of it.</p>
+<p>The app keeps its working data in private storage on your phone. We do not receive it. Android's cloud backup is
+  switched off for this app, so Android does not automatically copy it to a backup service. Uninstalling the app, or clearing its storage in
+  Android settings, deletes the app’s private copies, not exports saved elsewhere.</p>
 <div class="table-wrap">
 <table>
   <thead><tr><th scope="col">Data</th><th scope="col">Why</th></tr></thead>
@@ -126,8 +129,13 @@
 <p>The app asks for location only when you use a feature that needs it, such as "Use my current location". You can instead
   choose your city from the city lists and never grant location. Background location ("Allow all the time") is optional:
   after an explanation in the app, it lets the app switch to a saved mosque's timetable, or to one of your profiles, when you
-  arrive, even when the app is closed. Arrival is detected on the phone by Android and Google Play services. The app itself
-  never sends your location anywhere, except the rounded position used by the optional online prayer times (section 4).</p>
+  arrive, even when the app is closed. Arrival is detected on the phone by Android and Google Play services. Qibla Direction,
+  while it is open and only when location is allowed, asks for a fresh position (GPS, or the mobile network's or Wi-Fi's
+  approximate position) when it opens and when you tap "Use my position now"; it uses it only on that screen, to work out the
+  bearing when you are more than about 2 km from your saved place, and the app never saves or sends it (a mobile network or
+  Wi-Fi position is found by the phone's location service, which may use the internet). The app itself never sends your
+  location anywhere, except the rounded position used by the optional online prayer times (section 4) and the map areas you view
+  when you open the masjid map, a profile's place on the map or the Qibla's map (section 5a).</p>
 
 <h2 id="profiles">3. Profiles and Wi-Fi names</h2>
 <p>Profiles (for example Home, Office or Travel) are optional. A profile can switch on by days and times you choose, when the
@@ -158,6 +166,19 @@
   Settings → City lists & storage you can mark lists to keep or remove any of them. The website's host may keep ordinary
   access logs (the file asked for and the internet address) under its own terms; we do not use them, and uninstalling the app
   does not delete them.</p>
+
+<h2 id="map">5a. Masjid map (only when you tap it)</h2>
+<p>When adding or editing a masjid, for a profile's place, and when adding your own place (City search → Add your own place), <strong>Pick on the map</strong> opens an OpenStreetMap map. The same map is used for the
+  Qibla check: on Qibla Direction, <strong>Check on a map</strong> shows the line from your position (or saved place) towards the
+  Kaaba on it. Its map pictures (tiles) are downloaded from OpenStreetMap's tile servers, so those servers see which map areas you
+  view (around the masjid, your place or where the Qibla is checked),
+  your internet address and the app's name; the pictures are kept in the app's cache on the phone. OpenStreetMap is run by the
+  OpenStreetMap Foundation under its own terms (<a href="https://osmfoundation.org/wiki/Privacy_Policy">osmfoundation.org</a>).
+  <strong>Or paste a Google Maps link</strong> reads the coordinates on the phone; only a short link (maps.app.goo.gl) is opened,
+  over HTTPS and only on Google's own addresses, to find the full link it points to, so Google sees that link and your internet
+  address, under Google's terms. Neither happens unless you tap it, and nothing else is sent: no account, masjid name, times, Qibla bearing or files.
+  <strong>Your places</strong> (the names and positions you save in the city search) stay on the phone; they are in a backup file
+  only when you make one.</p>
 
 <h2 id="mlkit">6. Reading timetable photos</h2>
 <p>Text in timetable photos is read on the phone with Google ML Kit's built-in text recognizer. Photos, PDFs and the text read
@@ -196,18 +217,19 @@
   <li><strong>Foreground service:</strong> keep the alarm schedule running on phones that close background apps, and play the azaan.</li>
   <li><strong>Battery settings:</strong> ask Android not to delay the alarms.</li>
   <li><strong>Location (optional) and Wi-Fi state:</strong> as described in sections 2 and 3.</li>
-  <li><strong>Internet:</strong> only for the optional online prayer times, city-list downloads and Google ML Kit's diagnostics.</li>
+  <li><strong>Internet:</strong> only for the optional online prayer times, city-list downloads, the masjid map (also the Qibla's
+    map) and Google Maps short links (when you tap them), and Google ML Kit's diagnostics.</li>
 </ul>
 <p>The app does not use the camera permission (photos come from your camera app), contacts, microphone, messages or advertising ID.</p>
 
 <h2 id="sharing">9. Sharing</h2>
-<p>Apart from ML Kit's diagnostics, the optional online prayer times and city-list downloads, the app shares nothing by itself. Something leaves the phone
+<p>Apart from ML Kit's diagnostics, the optional online prayer times and city-list downloads, and the masjid map (also used for the Qibla check) and Google Maps short links when you tap them (section 5a), the app shares nothing by itself. Something leaves the phone
   only when you send it yourself, for example a crash report, bug report or feedback through your email app, or a board photo
   opened in another app. We do not sell, rent or trade data,
   and there is no advertising or tracking.</p>
 
 <h2 id="security">10. Security</h2>
-<p>Data is kept in the app's private storage, which other apps cannot read. The app has no backend or automatic report upload. Reports you choose to email are held in the developer's mailbox as described in section 7. Online prayer times, city lists and ML Kit's diagnostics travel over encrypted connections (HTTPS), and each
+<p>Data is kept in the app's private storage, which other apps cannot read. The app has no backend or automatic report upload. Reports you choose to email are held in the developer's mailbox as described in section 7. Online prayer times, city lists, the masjid map's tiles, Google Maps short links and ML Kit's diagnostics travel over encrypted connections (HTTPS), and each
   downloaded city list is checked before use.</p>
 
 <h2 id="retention">11. Keeping and deleting data</h2>
@@ -215,8 +237,9 @@
   prayer start times or the jamaat times learned for a place; in Settings → City lists & storage you can remove downloaded city
   lists, saved online prayer times and saved-masjid calculations; you can turn off online prayer times and automatic downloads at any time, or delete everything by uninstalling the app or clearing its storage in
   Android settings. Unsent crash reports expire after 14 days and temporary report files after a day. If you send an email, the
-  developer deletes it once resolved, within 90 days at the latest; you can request earlier deletion. Data that Google ML Kit
-  or AlAdhan receive is handled under their own policies.</p>
+  developer deletes it once resolved, within 90 days at the latest; you can request earlier deletion. Data that Google ML Kit,
+  AlAdhan, OpenStreetMap (map tiles) or Google (a short link) receive is handled under their own policies. The masjid map's
+  tiles are kept in the app's cache, which Android may clear and which Settings → Apps → Storage → Clear cache deletes.</p>
 
 <h2 id="rights">12. Your choices and rights</h2>
 <p>You decide what the app may use: location, background location, Do Not Disturb access, online prayer times, city-list downloads and crash reports
@@ -227,21 +250,22 @@
 
 <h2 id="international">13. Users around the world</h2>
 <p>The app can be used in any country. Your data is processed on your own phone. If you turn on online prayer times, the rounded
-  location and calculation settings are sent to AlAdhan's service; city lists come from the app's website; and Google ML Kit's
+  location and calculation settings are sent to AlAdhan's service; city lists come from the app's website; the masjid map's tiles
+  come from OpenStreetMap and a Google Maps short link is opened at Google, when you tap them; and Google ML Kit's
   diagnostics are sent to Google; these services
   may process data in other countries under their own terms.</p>
 
 <h2 id="children">14. Children</h2>
-<p>Namaz Companion: Salah Times is a general-audience prayer clock. It does not knowingly collect personal information from anyone,
+<p>Masjid Companion: Salah Times is a general-audience prayer clock. It does not knowingly collect personal information from anyone,
   including children.</p>
 
 <h2 id="changes">15. Changes and contact</h2>
 <p>If this policy changes, the new version is published at this address with a new effective date, and important changes are
   noted in the app's release notes.</p>
-<p>Questions or requests: <a href="mailto:engr.ix9@gmail.com">engr.ix9@gmail.com</a></p>
+<p>Questions or requests: <a href="mailto:irflabs@gmail.com">irflabs@gmail.com</a></p>
 
 <footer>
-  <p>Namaz Companion: Salah Times · Privacy policy · Updated 14 October 2026</p>
+  <p>Masjid Companion: Salah Times · Privacy policy · Updated 30 October 2026</p>
 </footer>
 
 </main>
