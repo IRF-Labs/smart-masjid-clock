@@ -55,7 +55,7 @@
 <main>
 <header>
   <h1>Masjid Companion: Salah Times privacy policy</h1>
-  <p class="meta">Effective 1 October 2026 · updated 5 November 2026 for Find Masjids Nearby (earlier: 4 November for the distance to your masjids from where you are; 1 November for the single position checks around prayer times that pick your masjid, Open in Google Maps and the Qibla map's position now; 31 October for the masjid map, your own places, and the Qibla's map line and position now) · applies to Masjid Companion: Salah Times for Android, version 3.9.0 and later
+  <p class="meta">Effective 1 October 2026 · updated 6 November 2026 for Search in Google Maps and See in Google Maps in Find Masjids Nearby, a place shared from Google Maps, and Find Masjids Nearby asking its busy server again (earlier: 5 November for Find Masjids Nearby; 4 November for the distance to your masjids from where you are; 1 November for the single position checks around prayer times that pick your masjid, Open in Google Maps and the Qibla map's position now; 31 October for the masjid map, your own places, and the Qibla's map line and position now) · applies to Masjid Companion: Salah Times for Android, version 3.9.0 and later
     (application ID <code>com.irflabs.salahalerts</code>)</p>
   <p class="meta">Published by iKhan</p>
 </header>
@@ -185,13 +185,17 @@
   <strong>Or paste a Google Maps link</strong> reads the coordinates on the phone; only a short link (maps.app.goo.gl) is opened,
   over HTTPS and only on Google's own addresses, to find the full link it points to, so Google sees that link and your internet
   address, under Google's terms. <strong>Open in Google Maps</strong> (on the map) opens the Google Maps app, or the browser, at the
-  point shown, so Google sees that point; a place you then share back from Google Maps (Share → Masjid Companion) is kept in memory
-  until you use it on the map or set it aside; nothing is opened or sent for it until you tap <strong>Use it</strong>. Neither happens unless you tap it, and nothing else is sent: no account, masjid name, times, Qibla bearing or files.
+  point shown, so Google sees that point, and only when you tap it. A place you share from Google Maps (Share → Masjid Companion) is kept in memory
+  (its name and link, never saved) until you use it or set it aside. If a map is open here it is offered there, and nothing is opened or sent for it until you tap <strong>Use it</strong>.
+  If no map is open, the app reads it as soon as you share it: a Google short link is opened as described above to find its position (Google sees that link and your internet address, under Google's terms) and Add Masjid opens with the name and position filled in; the name is read from the shared text on the phone. Nothing else is sent: no account, masjid name, times, Qibla bearing or files.
   <strong>Your places</strong> (the names and positions you save in the city search) stay on the phone; they are in a backup file
   only when you make one.</p>
 
 <h2 id="nearby">5b. Find Masjids Nearby (only when you tap it)</h2>
-<p><strong>Find Masjids Nearby</strong> (on My Masjid and Saved Masjids) looks up masjids on OpenStreetMap, only when you tap it or Try again. The app divides the map into squares of about 11 km and asks the Overpass service (overpass-api.de, or overpass.private.coffee if the first does not answer), in one request, for the masjids in the squares your 3 km circle touches that are not already saved on the phone. Only that box (an area of up to about 25 km across) is sent, never your position, name or anything else; the service also sees your internet address and the app's name, under OpenStreetMap's and the operator's own terms. The answers are kept on the phone for 30 days so the same area is not asked for again; a search whose squares are all saved sends nothing; the answers are kept in the app's own files, not in backups, and clearing the app's storage deletes them. A masjid from the map has no jamaat times and never drives an alarm or silence until you add it and enter its times.</p>
+<p><strong>Find Masjids Nearby</strong> (on My Masjid and Saved Masjids) looks up masjids on OpenStreetMap, only when you tap it or Try again. The app divides the map into squares of about 11 km and asks the Overpass service in one request: overpass-api.de first (when it is busy the app asks it again, up to three times with a short wait), and when that fails for any reason (busy, no answer in time, an error or no connection) the backup server overpass.private.coffee once, with the same box; the whole search ends within 90 seconds. It asks for the masjids in the squares your 3 km circle touches that are not already saved on the phone. Only that box (an area of up to about 25 km across) is sent, never your position, name or anything else (the same box is sent again when the service is busy, and to the backup server when the first fails); the service also sees your internet address and the app's name, under OpenStreetMap's and the operator's own terms. The answers are kept on the phone for 30 days so the same area is not asked for again; a search whose squares are all saved sends nothing; the answers are kept in the app's own files, not in backups, and clearing the app's storage deletes them. A masjid from the map has no jamaat times and never drives an alarm or silence until you add it and enter its times.
+  <strong>Search in Google Maps</strong> (at the top of Find Masjids Nearby) opens the Google Maps app, or another app that opens map links, searching for “mosque”; the app sends nothing in it (Google Maps uses its own location, under Google's terms).
+  <strong>See in Google Maps</strong> (on each masjid in the list) opens Google Maps, or the browser, in satellite view at that masjid's point, so Google sees that one point (never your position) and your internet address.
+  Neither opens unless you tap it.</p>
 
 <h2 id="mlkit">6. Reading timetable photos</h2>
 <p>Text in timetable photos is read on the phone with Google ML Kit's built-in text recognizer. Photos, PDFs and the text read
@@ -231,12 +235,12 @@
   <li><strong>Battery settings:</strong> ask Android not to delay the alarms.</li>
   <li><strong>Location (optional) and Wi-Fi state:</strong> as described in sections 2 and 3.</li>
   <li><strong>Internet:</strong> only for the optional online prayer times, city-list downloads, Find Masjids Nearby, the masjid map (also the Qibla's
-    map) and Google Maps short links (when you tap them), and Google ML Kit's diagnostics.</li>
+    map) and Google Maps short links (when you tap them or share a place from Google Maps), and Google ML Kit's diagnostics.</li>
 </ul>
 <p>The app does not use the camera permission (photos come from your camera app), contacts, microphone, messages or advertising ID.</p>
 
 <h2 id="sharing">9. Sharing</h2>
-<p>Apart from ML Kit's diagnostics, the optional online prayer times and city-list downloads, and the masjid map (also used for the Qibla check), Find Masjids Nearby (section 5b) and Google Maps short links when you tap them (section 5a), the app shares nothing by itself. Something leaves the phone
+<p>Apart from ML Kit's diagnostics, the optional online prayer times and city-list downloads, and the masjid map (also used for the Qibla check), Find Masjids Nearby (section 5b, with its Search in Google Maps and See in Google Maps buttons) and Google Maps short links when you tap them or share a place from Google Maps (section 5a), the app shares nothing by itself. Something leaves the phone
   only when you send it yourself, for example a crash report, bug report or feedback through your email app, or a board photo
   opened in another app. We do not sell, rent or trade data,
   and there is no advertising or tracking.</p>
@@ -264,7 +268,7 @@
 <h2 id="international">13. Users around the world</h2>
 <p>The app can be used in any country. Your data is processed on your own phone. If you turn on online prayer times, the rounded
   location and calculation settings are sent to AlAdhan's service; city lists come from the app's website; the masjid map's tiles and the nearby-masjid listings
-  come from OpenStreetMap and a Google Maps short link is opened at Google, when you tap them; and Google ML Kit's
+  come from OpenStreetMap and a Google Maps short link is opened at Google, when you tap them or share a place from Google Maps; and Google ML Kit's
   diagnostics are sent to Google; these services
   may process data in other countries under their own terms.</p>
 
@@ -278,7 +282,7 @@
 <p>Questions or requests: <a href="mailto:irflabs@gmail.com">irflabs@gmail.com</a></p>
 
 <footer>
-  <p>Masjid Companion: Salah Times · Privacy policy · Updated 5 November 2026</p>
+  <p>Masjid Companion: Salah Times · Privacy policy · Updated 6 November 2026</p>
 </footer>
 
 </main>
